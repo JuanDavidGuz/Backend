@@ -18,7 +18,7 @@ class Server {
         this.io = require('socket.io')(this.server);
         this.paths = {
             auth: '/api/auth',
-            task: '/api/task'
+            post: '/api/post'
         }
 
         this.dbConnection();
@@ -57,7 +57,7 @@ class Server {
 
     setroutes(){
         this.app.use(this.paths.auth, require('./routes/auth'))
-        this.app.use(this.paths.task, require('./routes/task'))
+        this.app.use(this.paths.post, require('./routes/Post'))
     }
 
     listen(){

@@ -14,7 +14,7 @@ app.use(express.static('public'))
 app.use(express.json());
 
 app.use('/api/auth', require('./routes/auth'))
-app.use('/api/task', require('./routes/task'))
+app.use('/api/post', require('./routes/Post'))
 
 app.listen(process.env.PORT, () => {
     console.log('Server listening on', process.env.PORT)
